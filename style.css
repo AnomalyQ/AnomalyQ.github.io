@@ -1,3 +1,6 @@
+body{
+	background-color: #FFD073;
+}
 .container{
 	width: 720px;
 	margin: 0 auto;
@@ -16,13 +19,16 @@ img{
 p{
 	color: #333;
 	font-family: arial;
+	font-size: 16px;
 }
 h1{
 	margin: 0;
+	font-size: 40px;
 }
 h2{
 	margin: 0;
 	margin-bottom: 0.5em;
+	font-size: 32px;
 }
 .nav-ul{
 	display: flex;
@@ -37,6 +43,13 @@ h2{
 	text-decoration: none;
 	color: #333;
 	font-family: arial;
+	margin: 0;
+	line-height: 2em;
+	padding: 4.78em;
+}
+.nav-ul li:hover{
+	background-color: #BF8F30;
+	text-decoration: underline;
 }
 .container-for-video{
 	display: flex;
