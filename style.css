@@ -45,7 +45,8 @@ h2{
 	font-family: arial;
 	margin: 0;
 	line-height: 2em;
-	padding: 4.78em;
+	padding-left: 4.78em;
+	padding-right: 4.78em;
 }
 .nav-ul li:hover{
 	background-color: #BF8F30;
