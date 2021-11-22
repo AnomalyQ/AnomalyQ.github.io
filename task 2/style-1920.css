@@ -15,7 +15,6 @@ p, h1{
 	background: rgba(36, 42, 86, 0.7);
 	backdrop-filter: blur(10px);
 }
-@media (min-width: 1920px){
 	#main-container{
 		height: 896px;
 		background: url(sorce/png/1920/background-1920.png);
@@ -530,4 +529,3 @@ p, h1{
 		font-size: 16px;
 		line-height: 24px;
 	}
-}
