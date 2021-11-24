@@ -11,51 +11,49 @@ img{
 p, h1{
 	margin: 0;
 }
+
 #header-container{
 	background: rgba(36, 42, 86, 0.7);
 	backdrop-filter: blur(10px);
 }
 #main-header-container{
-	height: 896px;
 	background: url(sorce/png/1920/background-1920.png);
 }
 #header-container{
-	height: 896px;
+	height: 852px;
 }
 #header-cap{
-	height: 96px;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 688px;
 }
 #logo{
-	position: relative;
-	width: 170.74px;
-	height: 48px;
-	left: 30px;
-	top: calc(50% - 48px/2);
+	width: 113.83px;
+	height: 32px;
+	padding-top: 10px;
+	padding-right: 240px;
+	z-index: 5;
 }
 #nav-menu{
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	padding: 0px;
-	position: absolute;
-	width: 933px;
-	height: 48px;
-	right: 30px;
-	top: 24px;
-}
-#nav{
-	margin-right: 60px;
 }
 #nav-ul{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: 0;
+	margin-top: 100px;
+	margin-left: 120px;
 }
 #nav-ul li{
 	list-style-type: none;
 }
 #nav-ul li:not(:last-child){
 	margin-right: 40px;
+	padding-bottom: 60px;
 }
 #nav-ul li a{
 	text-decoration: none;
@@ -63,16 +61,72 @@ p, h1{
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 19px;
-}
-#nav-ul li a:hover, #nav-menu button:hover{
-	color: #FFFFFF;
+
 }
 #nav-ul li a:hover{
 	padding-bottom: 20px;
 	border-bottom: 4px solid #FFFFFF;
-}	
+}
+#nav-ul li a:hover, #nav-menu button:hover{
+	color: #FFFFFF;
+}
+.menu-btn {
+	width: 30px;
+	height: 40px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+	margin-left: 20px;
+}
+.menu-btn span {
+	width: 40px;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+.menu-btn.active span:nth-of-type(1) {
+	display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(45deg);  
+}
+.menu-btn.active span:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(-45deg); 
+}
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 45%;
+	height: 96.5%;
+	padding: 15px;
+	background: #393A56;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+	z-index: 1;
+}
+.menu.active {
+	transform: translateX(0);
+}
+.menu li {
+	list-style-type: none;
+}
+
+
 #nav-buttons{
 	display: flex;
 	flex-direction: row;
@@ -101,70 +155,70 @@ p, h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 679px;
+	width: 500px;
 	height: 350px;
-	left: 261px;
+	left: 100px;
 	top: calc(50% - 350px/2 + 48px);
 }
 #header-text-1{
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	color: #FFFFFF;
 }
 h1{
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 68px;
-	line-height: 79px;
+	font-size: 48px;
+	line-height: 56px;
 	color: #FFFFFF;
 }
 #header-text-2{
 	font-family: "Roboto";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #FFFFFF;
 }
 #main-container-1{
 	display: flex;
 	flex-direction: row;
 	margin: 0 auto;
-	width: 1398px;
-	height: 784px;
+	width: 688px;
+	height: 760px;
 }
 #main-img{
 	position: relative;
-	width: 680px;
-	height: 624px;
-	top: calc(50% - 624px/2);
+	width: 334px;
+	height: 306.49px;
+	left: 0px;
+	top: calc(50% - 306.49px/2);
 }
 #main-img-number{
 	position: relative;
-	width: 549.71px;
-	height: 624px;
-	left: 65px;
+	width: 270.01px;
+	height: 306.49px;
 }
 #logo-1{
 	position: absolute;
-	width: 153px;
-	height: 145px;
+	width: 75.15px;
+	height: 71.22px;
 	top: 1px;
 	left: 1px;
 }
 #logo-2{
 	position: absolute;
-	width: 265px;
-	height: 257px;
-	left: 375px;
-	top: 50px;
+	width: 130.16px;
+	height: 126.23px;
+	left: 184.19px;
+	top: 24.56px;
 }
 #logo-3{
 	position: absolute;
-	width: 167px;
-	height: 296px;
-	left: 96.5px;
-	top: 397.5px;
+	width: 82.03px;
+	height: 145.39px;
+	left: 47.4px;
+	top: 195.24px;
 	transform: matrix(0, 1, 1, 0, 0, 0);
 }
 #main-container-text-1{
@@ -172,43 +226,42 @@ h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 680px;
-	height: 624px;
-	left: 39px;
-	top: calc(50% - 624px/2);
+	width: 334px;
+	height: 680px;
+	top: calc(50% - 680px/2);
 }
 #text-1{
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	color: #242A56;
 }
 #main-container-text-1 .text{
 	font-family: "Roboto";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #242A56;
 }
 #coment{
-	padding: 30px;
-	width: 680px;
-	height:172px;
+	padding: 15px;
+	width: 334px;
+	height: 176px;
 	background: #FBF7F1;
 	border: 1px solid #C1D3DE;
 	box-sizing: border-box;
 	border-radius: 12px;
 	font-family: "Inter";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #242A56;
 }
 #main-container-2{
 	background: #393A56;
 }
 #main-container-text-2{
-	width: 1398px;
-	height: 790px;
+	width: 688px;
+	height: 743px;
 	margin: 0 auto;
 }
 #advertising{
@@ -219,44 +272,43 @@ h1{
 	margin-right: 40px;
 }
 #main-text-2{
-	width: 1400px;
-	height: 160px
-	margin-top: 80px;
-	margin-bottom: 40px;
-	padding-top: 80px;
+	height: 160px;
+	margin-bottom: 20px;
+	padding-top: 40px;
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	text-align: center;
 	color: #FFFFFF;
 }
 #google{
 	width: 75.12px;
 	height: 73.23px;
-	margin-top: 40px;
-	margin-bottom: 26.77px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 #advertising-google .main-p, #advertising-fb-inst .main-p{
 	font-family: "Inter";
 	font-weight: bold;
-	font-size: 26px;
+	font-size: 18px;
 	line-height: 26px;
 	color: #FFFFFF;
 }
 #advertising-google .text, #advertising-fb-inst .text{
 	font-family: "Inter";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #FFFFFF;
-	margin-top: 24px;
-	margin-bottom: 42px;
+	margin-top: 12px;
+	margin-bottom: 20px;
+}
+#advertising-google .text{
+	margin-bottom: 63px;
 }
 #advertising button{
 	width: 279px;
 	height: 60px;
-	left: 0px;
-	top: 230px;
 	background: #376FFF;
 	border-radius: 12px;
 	font-family: "Inter";
@@ -271,41 +323,39 @@ h1{
 	height: 7px;
 }
 #fb-inst{
-	width: 106.13px;
-	height: 73.23px;
-	margin-top: 30px;
-	margin-bottom: 16.77px;
+	width: 126.13px;
+	height: 86.19px;
 }
 #advertising-fb-inst, #advertising-google{
-	width: 680px;
-	height: 422px;
+	width: 334px;
+	height: 451px;
 }
 #main-container-3{
 	background: url(sorce/png/1920/background-footer-1920.png);
 }
 #main-container-text-3{
-	width: 1398px;
-	height: 504px;
+	width: 688px;
+	height: 528px;
 	margin: 0 auto;
 }
 #main-container-text-3 #main-text{
-	margin-top: 80px;
+	padding-top: 20px;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	text-align: center;
 	color: #242A56;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 }
 #main-container-text-3 #text{
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	text-align: center;
 	color: #242A56;
 }
@@ -314,25 +364,35 @@ h1{
 	flex-direction: row;
 	justify-content: space-between;
 }
-#slider-nav{
+#img3, #img4{
 	display: none;
 }
+#slider-nav{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#slider-nav div{
+	width: 40px;
+	height: 40px;
+}
 .slider-img{
-	width: 320px;
-	height: 320px;
+	width: 334px;
+	height: 334px; 		
 }
 #main-container-4{
-	width: 1398px;
-	height: 906px;
+	width: 688px;
+	height: 678px;
 	margin: 0 auto;
 }
 #clients p{
-	margin-top: 80px;
-	margin-bottom: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	text-align: center;
 	color: #242A56;
 }
@@ -345,54 +405,62 @@ h1{
 	justify-content: space-between;
 }
 .img-box{
-	width: 264px;
-	height: 111px;
+	width: 164px;
+	height: 68px;
 }
 #img-phone{
-	display: none;
+	margin-top: 20px; 
+	margin-left: 176px;
+	display: flex;
+	flex-direction: row;
+}
+#phone-img1{
+	margin-right: 10px;
 }
 #development{
-	margin-top: 80px;
-	height: 324px;
+	margin-top: 40px;
+	width: 688px;
+	height: 274px;
 	border-radius: 12px;
 	background: #376FFF;
 	display: flex;
 }
 #text-development{
-	margin-left: 60px;
-	margin-top: 60px;
+	margin-left: 40px;
+	margin-top: 30px;
 }
 #development .text-1{
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 46px;
+	font-size: 28px;
+	line-height: 36px;
 	color: #FFFFFF;
 	margin-bottom: 40px;
+	width: 294px;
 }
 #development .text-2{
 	font-family: "Inter";
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 18px;
+	line-height: 26px;
 	color: #FFFFFF;
 }
 #development #number{
-	margin-top: 123px;
-	margin-left: 132px;
+	margin-top: 100px;
+	margin-left: 20px;
 }
 #number a{
 	font-family: "Inter";
 	font-weight: bold;
-	font-size: 68px;
-	line-height: 79px;
+	font-size: 32px;
+	line-height: 40px;
 	color: #FFFFFF;
 }
 footer{
 	background: url(sorce/png/1920/background-footer-1920.png);
 }
 #footer-container{
-	width: 1398px;
-	height: 794px;
+	width: 688px;
+	height: 763px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
@@ -402,41 +470,38 @@ footer{
 	flex-direction: column;	
 }
 #tel-2{
-	margin-top: 28px;
-	margin-left: 130px;
+	margin-top: 10px;
 }
 #logo-footer{
-	width: 238px;
-	height: 67px;
+	width: 213.13px;
+	height: 60px;
 	margin-top: 80px;
 	margin-bottom: 40px;
 }
 .footer-text{
 	font-family: "Inter";
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #8B9BAB;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 footer a{
 	font-family: "Inter";
 	font-weight: 600;
-	font-size: 26px;
+	font-size: 18px;
 	line-height: 26px;
 	color: #376FFF;
 }
 #tel{
 	display: flex;
-	flex-direction: row;
-	margin-bottom: 40px;
+	flex-direction: column;
 }
 #info{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin-bottom: 45px;
-}
-#info-1{
-	margin-right: 200px;
 }
 #email-address{
 	font-family: "Inter";
@@ -447,8 +512,8 @@ footer a{
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 26px;
 	color: #393A56;
 }
 #copyrite{
@@ -459,32 +524,33 @@ footer a{
 	color: #8B9BAB;
 }
 #form-container{
-	margin-left: 40px;
+	margin-left: 20px;
 	margin-top: 80px;
-	width: 680px;
-	height: 660px;
+	width: 334px;
+	height: 641px;
 	border-radius: 12px;
 	background: #376FFF;
 }
 #container-fix{
-	margin: 60px;
+	margin-top: 30px;
+	margin-right: 50px;
+	margin-left: 40px;
 	display: flex;
 	flex-direction: column;
 }
 #main-label{
-	margin-bottom: 24px;
 	font-family: "Inter";
 	font-weight: 900;
-	font-size: 38px;
-	line-height: 40px;
+	font-size: 28px;
+	line-height: 36px;
 	color: #FFFFFF;
 }
 #label{
 	font-family: "Inter";
-	font-size: 20px;
-	line-height: 26px;
+	font-size: 16px;
+	line-height: 24px;
 	color: #FFFFFF;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 input{
 	width: 100%;
@@ -499,12 +565,12 @@ input{
 	padding-left: 20px;
 }
 form div:not(:last-child){
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 form button{
 	background: #FFFFFF;
 	border-radius: 12px;
-	width: 200px;
+	width: 254px;
 	height: 60px;
 	font-family: "Inter";
 	font-weight: bold;
@@ -514,24 +580,29 @@ form button{
 }
 #last-form{
 	display: flex;
-	flex-direction: row;
-
+	flex-direction: column;
+}
+#map{
+	width: 334px;
+	height: 215px;
 }
 #last-form input{
 	width: 20px;
 	height: 20px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-right: 20px;
-
 }
 #access{
-	margin-left: 20px;
+	width: 350px;
+	margin-left: 0px;
 	display: flex;
 	flex-direction: row;
 	font-family: "Inter";
 	font-size: 16px;
-	line-height: 24px;
 	color: #C1D3DE
+}
+#access-text{
+	width: 250px;
 }
 #access-a{
 	color: #C1D3DE;
